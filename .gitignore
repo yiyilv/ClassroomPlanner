@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# CLion
+.idea/
+
+# Build
+cmake-build-*/
+build/
+
+# CMake cache
+CMakeCache.txt
+CMakeFiles/
+
+# executables
+*.exe
+*.out
+
+# zip
+*.zip
