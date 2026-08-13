@@ -1,13 +1,64 @@
 {
 	"models": [
-		{"id": "floor", "VD": "VDposUV", "model": "assets/models/Plane.gltf",  "format":"GLTF"}
+		{"id": "wallStraight", "VD": "VDposNormUV", "model": "assets/models/School/SM_School_Env_Wall_Straight.mgcg", "format":"MGCG"},
+		{"id": "floorTile", "VD": "VDposNormUV", "model": "assets/models/School/SM_School_Env_Floor01.mgcg", "format":"MGCG"},
+		{"id": "wallDoor",   "VD": "VDposNormUV", "model": "assets/models/School/SM_School_Env_Wall_Door.mgcg",   "format":"MGCG"},
+		{"id": "wallWindow", "VD": "VDposNormUV", "model": "assets/models/School/SM_School_Env_Wall_Window.mgcg", "format":"MGCG"},
+		{"id": "wallCorner", "VD": "VDposNormUV", "model": "assets/models/School/SM_School_Env_Wall_Corner.mgcg", "format":"MGCG"}
+
 	],
 	"textures": [
-		{"id": "tex", "texture": "assets/textures/toChange.jpg", "format": "C"}
+		{"id": "texSchool", "texture": "assets/textures/School/Tex_School.png", "format": "C"}
 	],
 	"instances": [
 		{"technique": "BlinnPos", "elements": [
-			{"id": "floor", "model": "floor",   "texture": ["tex"], "scale": [100.0, 100.0, 100.0]}
+
+			{"id": "wallBack1", "model": "wallStraight", "texture": ["texSchool"], "translate": [-4.5, 0.0, -12.0], "eulerAngles": [90, 0, 0]},
+			{"id": "wallBack2", "model": "wallStraight", "texture": ["texSchool"], "translate": [-1.5, 0.0, -12.0], "eulerAngles": [90, 0, 0]},
+			{"id": "wallBack3", "model": "wallStraight", "texture": ["texSchool"], "translate": [1.5,  0.0, -12.0], "eulerAngles": [90, 0, 0]},
+			{"id": "wallBack4", "model": "wallStraight", "texture": ["texSchool"], "translate": [4.5,  0.0, -12.0], "eulerAngles": [90, 0, 0]},
+
+			{"id": "wallFront1", "model": "wallStraight", "texture": ["texSchool"], "translate": [-4.5, 0.0, 0.0], "eulerAngles": [90, 0, 0]},
+			{"id": "wallFront2", "model": "wallDoor",      "texture": ["texSchool"], "translate": [-1.5, 0.0, 0.0], "eulerAngles": [90, 0, 0]},
+			{"id": "wallFront3", "model": "wallStraight",  "texture": ["texSchool"], "translate": [1.5,  0.0, 0.0], "eulerAngles": [90, 0, 0]},
+			{"id": "wallFront4", "model": "wallStraight",  "texture": ["texSchool"], "translate": [4.5,  0.0, 0.0], "eulerAngles": [90, 0, 0]},
+
+			{"id": "wallLeft1", "model": "wallStraight", "texture": ["texSchool"], "translate": [-7.5, 0.0, -9.0], "eulerAngles": [90, 90, 0]},
+			{"id": "wallLeft2", "model": "wallWindow",   "texture": ["texSchool"], "translate": [-7.5, 0.0, -6.0], "eulerAngles": [90, 90, 0]},
+			{"id": "wallLeft3", "model": "wallStraight", "texture": ["texSchool"], "translate": [-7.5, 0.0, -3.0], "eulerAngles": [90, 90, 0]},
+
+			{"id": "wallRight1", "model": "wallStraight", "texture": ["texSchool"], "translate": [7.5, 0.0, -9.0], "eulerAngles": [90, 90, 0]},
+			{"id": "wallRight2", "model": "wallWindow",   "texture": ["texSchool"], "translate": [7.5, 0.0, -6.0], "eulerAngles": [90, 90, 0]},
+			{"id": "wallRight3", "model": "wallStraight", "texture": ["texSchool"], "translate": [7.5, 0.0, -3.0], "eulerAngles": [90, 90, 0]},
+
+
+			{"id": "cornerBackLeft",   "model": "wallCorner", "texture": ["texSchool"], "translate": [-7.5, 0.0, -12.0], "eulerAngles": [90, 0,   0]},
+			{"id": "cornerBackRight",  "model": "wallCorner", "texture": ["texSchool"], "translate": [7.5,  0.0, -12.0], "eulerAngles": [90, 270,  0]},
+			{"id": "cornerFrontRight", "model": "wallCorner", "texture": ["texSchool"], "translate": [7.5,  0.0, 0.0],   "eulerAngles": [90, 180, 0]},
+			{"id": "cornerFrontLeft",  "model": "wallCorner", "texture": ["texSchool"], "translate": [-7.5, 0.0, 0.0],   "eulerAngles": [90, 90, 0]},
+
+
+			{"id": "floor_0_0", "model": "floorTile", "texture": ["texSchool"], "translate": [-6.0, 0.0, -1.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_0_1", "model": "floorTile", "texture": ["texSchool"], "translate": [-3.0, 0.0, -1.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_0_2", "model": "floorTile", "texture": ["texSchool"], "translate": [0.0,  0.0, -1.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_0_3", "model": "floorTile", "texture": ["texSchool"], "translate": [3.0,  0.0, -1.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_0_4", "model": "floorTile", "texture": ["texSchool"], "translate": [6.0,  0.0, -1.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_1_0", "model": "floorTile", "texture": ["texSchool"], "translate": [-6.0, 0.0, -4.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_1_1", "model": "floorTile", "texture": ["texSchool"], "translate": [-3.0, 0.0, -4.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_1_2", "model": "floorTile", "texture": ["texSchool"], "translate": [0.0,  0.0, -4.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_1_3", "model": "floorTile", "texture": ["texSchool"], "translate": [3.0,  0.0, -4.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_1_4", "model": "floorTile", "texture": ["texSchool"], "translate": [6.0,  0.0, -4.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_2_0", "model": "floorTile", "texture": ["texSchool"], "translate": [-6.0, 0.0, -7.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_2_1", "model": "floorTile", "texture": ["texSchool"], "translate": [-3.0, 0.0, -7.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_2_2", "model": "floorTile", "texture": ["texSchool"], "translate": [0.0,  0.0, -7.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_2_3", "model": "floorTile", "texture": ["texSchool"], "translate": [3.0,  0.0, -7.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_2_4", "model": "floorTile", "texture": ["texSchool"], "translate": [6.0,  0.0, -7.5],  "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_3_0", "model": "floorTile", "texture": ["texSchool"], "translate": [-6.0, 0.0, -10.5], "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_3_1", "model": "floorTile", "texture": ["texSchool"], "translate": [-3.0, 0.0, -10.5], "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_3_2", "model": "floorTile", "texture": ["texSchool"], "translate": [0.0,  0.0, -10.5], "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_3_3", "model": "floorTile", "texture": ["texSchool"], "translate": [3.0,  0.0, -10.5], "eulerAngles": [-90, 0, 0]},
+			{"id": "floor_3_4", "model": "floorTile", "texture": ["texSchool"], "translate": [6.0,  0.0, -10.5], "eulerAngles": [-90, 0, 0]}
+
 		]}
 	]
 }
